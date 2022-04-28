@@ -1,7 +1,4 @@
 from io import BytesIO
-from turtle import back
-
-from cairo import HINT_STYLE_SLIGHT
 
 from colorthief import ColorThief
 from PIL import Image
@@ -20,7 +17,7 @@ class Paletter:
 
     def __init__(self, img: str):
         self.img = img
-    
+
     def get_image(self) -> Image.Image:
         """
         Gera a nova imagem com a paleta de cores ao lado e retorna objeto do tipo Image.
@@ -46,7 +43,7 @@ class Paletter:
         background.paste(image, (5, 5))
 
         with BytesIO() as i:
-            image.save(i, 'JPEG')
+            image.save(i, 'PNG')
             i.seek(0)
 
             colors = ColorThief(i)
