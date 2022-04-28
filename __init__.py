@@ -1,1 +1,0 @@
-from .paletter import Paletter
