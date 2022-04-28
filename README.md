@@ -68,13 +68,14 @@ $ python3 manage.py runserver
 
 Tendo inicializado a aplicação, simplesmente navegue para o endereço `127.0.0.1:8000` em seu navegador.
 
-### ▪ Envio:
+### ▪ Envio(s):
 <div align="center">
   <img src="https://i.imgur.com/EY20I1h.png" width="800"></img>
 </div>
 
-### ▪ Retorno:
+### ▪ Retorno(s):
 <div align="center">
   <img src="https://i.imgur.com/gtY0NAe.png" width="800"></img>
+  <img src="https://i.imgur.com/oazPwpR.png" width="800"></img>
 </div>
 
