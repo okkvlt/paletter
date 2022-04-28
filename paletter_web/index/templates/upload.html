@@ -1,0 +1,84 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        background-color: rgb(12, 10, 10);
+        text-align: center;
+    }
+
+    .custom-file-upload {
+        border: 1px solid rgb(139, 139, 139);
+        border-radius: 20px;
+        border-style: dashed;
+        border-width: 4px;
+        width: 35%;
+        height: 20%;
+        display: inline-block;
+        padding: 6px 12px;
+        cursor: pointer;
+        position: relative;
+        color: rgb(139, 139, 139);
+        font-family: 'Nunito', sans-serif;
+        font-size: 20;
+        font-weight: 600;
+        transition: all 1s;
+    }
+
+    .custom-file-upload:hover {
+        border: 1px solid rgb(105, 105, 105);
+        border-width: 4px;
+        border-style: dashed;
+        width: 34%;
+        height: 19%;
+        color: rgb(105, 105, 105);
+        font-family: 'Nunito', sans-serif;
+        font-size: 22;
+    }
+
+    input[type="file"] {
+        display: none;
+    }
+
+    .center {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    button {
+        background-color: rgb(139, 139, 139);
+        font-family: 'Nunito', sans-serif;
+        font-size: larger;
+        font-weight: 800;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        width: 36%;
+        height: 40px;
+        transition: all 1s;
+    }
+
+    button:hover {
+        background-color: #ccc;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <br><br><br><br>
+    <form method="post" enctype="multipart/form-data" action=".">
+        {% csrf_token %}
+        <label class="custom-file-upload">
+            <input type="file" onchange="this.form.submit()" name="file">
+            <div class="center">
+                Upload image here!
+                <br>(.jpg, .jpeg, .png)
+            </div>
+        </label><br><br>
+    </form>
+</body>
